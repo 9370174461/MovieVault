@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { BiSolidStar } from "react-icons/bi";
 
