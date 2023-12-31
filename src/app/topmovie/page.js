@@ -63,4 +63,4 @@ function Moviedata() {
     </div>
   );
 }
-export default moviedata;
+export default Moviedata;
