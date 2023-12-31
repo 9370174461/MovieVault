@@ -5,7 +5,7 @@ import Slider from "./components/Slider";
 import Topmovie from "./topmovie/page";
 import { Carousel } from "react-bootstrap";
 
-export default function page() {
+export default function Page() {
   const [movielist, setMovielist] = useState([]);
   useEffect(() => {
     const getmovie = async () => {

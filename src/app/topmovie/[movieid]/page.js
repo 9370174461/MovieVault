@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import { BiSolidStar } from "react-icons/bi";
 import { FaThumbsUp } from "react-icons/fa6";
 
-export default function movieid({ params }) {
+export default function Movieid({ params }) {
   const [movie, setMovie] = useState([]);
 
   useEffect(() => {

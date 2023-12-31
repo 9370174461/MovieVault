@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { BiSolidStar } from "react-icons/bi";
 
-function moviedata() {
+function Moviedata() {
   const [movielist, setMovielist] = useState([]);
 
   useEffect(() => {
@@ -63,4 +63,4 @@ function moviedata() {
     </div>
   );
 }
-export default moviedata;
+export default Moviedata;

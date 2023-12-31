@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 
 import "bootstrap-icons/font/bootstrap-icons.css";
 
-function moviedata() {
+function Moviedata() {
   const [movielist, setMovielist] = useState([]);
  useEffect(() => {
     const getmovie = async () => {
