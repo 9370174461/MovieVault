@@ -3,7 +3,6 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 /* styles/globals.css */
 import "bootstrap/dist/css/bootstrap.min.css";
-// import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,8 +12,12 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+
   return (
     <html lang="en">
+      <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1"/>
+      </head>
       <body className={inter.className}>
         <div>
           <Navbar />

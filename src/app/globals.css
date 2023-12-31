@@ -17,5 +17,18 @@ body {
     height: 30vh;
     width: 30vh ;
   }
-  
+}
+
+hr{
+  margin-top: 5px;
+  color:white;
+}
+
+a,  a:visited {
+  color: rgb(207, 203, 203) !important;
+  text-decoration: none;
+}
+
+a:hover,  a:active {
+   color: white !important;
 }

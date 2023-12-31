@@ -23,7 +23,7 @@ function Moviedata() {
   }, []);
   return (
     <div>
-      <h2 className="text-center p-3">Top Movies</h2>
+      <h2 className="text-center p-3" style={{color:'white'}}>Top Movies</h2>
       {movielist.slice(0, 5).map((movie) => (
         <div
           key={movie.id}
@@ -38,17 +38,17 @@ function Moviedata() {
               color: "white",
             }}
           >
-            <Link href={`http://localhost:3000/topmovie/${movie.id}`}>
+            <Link href={`/topmovie/${movie.id}`}>
               <div className="row">
-                <div className="col">
+                <div className="col justify-content-md-center">
                   <img
                     src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-                    style={{ height: "50vh", width: "20vw" }}
-                    className="rounded float-left img-fluid"
+                    style={{ height: "60vh", width: "100%" }}
+                    className="rounded float-left img-fluid-sx"
                     alt="..."
                   />
                 </div>
-                <div className="col-md-8 " style={{}}>
+                <div className="col-md-9 " style={{}}>
                   <div className="card-body">
                     <h5 className="card-title grid gap-3">{movie.title} </h5>
                     <h5>Overview:</h5>

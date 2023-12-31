@@ -27,7 +27,7 @@ export default function Page() {
     <>
       <div>
         <Slider movielist={movielist} />
-
+        <hr/>
         <Topmovie />
       </div>
     </>

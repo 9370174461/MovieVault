@@ -35,17 +35,17 @@ function Moviedata() {
               color: "white",
             }}
           >
-            <Link href={`http://localhost:3000/topmovie/${movie.id}`}>
+            <Link href={`/topmovie/${movie.id}`}>
               <div className="row">
                 <div className="col">
                   <img
                     src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-                    style={{ height: "50vh", width: "20vw" }}
+                    style={{ height: "60vh", width: "100%" }}
                     className="rounded float-left"
                     alt="..."
                   />
                 </div>
-                <div className="col-md-8 ">
+                <div className="col-md-9 ">
                   <div className="card-body">
                     <h5 className="card-title grid gap-3">
                       {movie.title} <BiSolidStar size={25} color="white" />
