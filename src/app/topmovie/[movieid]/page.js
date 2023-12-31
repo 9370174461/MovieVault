@@ -9,21 +9,24 @@ import { FaThumbsUp } from "react-icons/fa6";
 
 export default function movieid({ params }) {
   const [movie, setMovie] = useState([]);
-  const getmovie = async () => {
-    try {
-      fetch(
-        `https://api.themoviedb.org/3/movie/${params.movieid}?api_key=79bd47a591062f4695f664d8ff6a67d7`
-      )
-        .then((res) => res.json())
-        .then((res) => setMovie(res));
-    } catch (error) {
-      setError("Error fetching data");
-    }
-  };
+
   useEffect(() => {
+    const getmovie = async () => {
+      try {
+        fetch(
+          `https://api.themoviedb.org/3/movie/${params.movieid}?api_key=79bd47a591062f4695f664d8ff6a67d7`
+        )
+          .then((res) => res.json())
+          .then((res) => setMovie(res));
+      } catch (error) {
+        setError("Error fetching data");
+      }
+    };
     getmovie();
+    return () => {};
   }, []);
 
+  
   if (!movie) {
     return <div>Movie not found</div>;
   }
