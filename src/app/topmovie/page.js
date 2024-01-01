@@ -42,6 +42,7 @@ function Moviedata() {
               <div className="row">
                 <div className="col justify-content-md-center">
                   <img
+                  
                     src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                     style={{ height: "60vh", width: "100%" }}
                     className="rounded float-left img-fluid-sx"
