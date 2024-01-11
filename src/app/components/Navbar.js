@@ -38,6 +38,11 @@ export default function Navbar() {
                   All Movies
                 </a>
               </li>
+              <li className="nav-item">
+                <a className="nav-link active" href="/popularmovie">
+                  Popular Movie
+                </a>
+              </li>
             </ul>
           </div>
         </div>
