@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useEffect } from "react";
 
 export default function Navbar() {
@@ -41,6 +41,19 @@ export default function Navbar() {
               <li className="nav-item">
                 <a className="nav-link active" href="/popularmovie">
                   Popular Movie
+                </a>
+              </li>
+            </ul>
+
+            <ul className="nav justify-content-end">
+              <li className="nav-item">
+                <a className="nav-link active" aria-current="page" href="#">
+                  Login
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#">
+                  Logout
                 </a>
               </li>
             </ul>
