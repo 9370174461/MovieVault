@@ -65,14 +65,15 @@ export default function Navbar() {
   <div className="modal-dialog">
     <div className="modal-content">
       <div className="modal-header">
-        <h1 className="modal-title fs-5" id="exampleModalLabel">Login In Flipkart</h1>
+        <h1 className="modal-title fs-5" id="exampleModalLabel">Login In TopMovie</h1>
         <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div className="modal-body">
         <form>
           <div className="mb-3">
             <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
-            <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
+            <input type="email" className="form-control"
+             id="exampleInputEmail1" aria-describedby="emailHelp"/>
             <div id="emailHelp" className="form-text">Well never share your email with anyone else.</div>
           </div>
           <div className="mb-3">
