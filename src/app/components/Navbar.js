@@ -43,6 +43,11 @@ export default function Navbar() {
                   Popular Movie
                 </a>
               </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/addmovie">
+                  Add Movies
+                </a>
+              </li>
             </ul>
 
             <ul className="nav justify-content-end">
@@ -61,7 +66,7 @@ export default function Navbar() {
         </div>
       </nav>
       
-<div className="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+<div className="modal fade" id="loginModal" tabIndex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
   <div className="modal-dialog">
     <div className="modal-content">
       <div className="modal-header">
