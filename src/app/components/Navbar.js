@@ -54,22 +54,8 @@ export default function Navbar() {
               </li>
             </ul>
 
-            <ul className="nav justify-content-end">
-              <li
-                className="nav-item"
-                data-bs-toggle="modal"
-                data-bs-target="#loginModal"
-              >
-                <a className="nav-link active" aria-current="page" href="#">
-                  Login
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link danger" href="#">
-                  Logout
-                </a>
-              </li>
-            </ul>
+          
+            
           </div>
         </div>
       </nav>
