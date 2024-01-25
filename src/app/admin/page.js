@@ -1,9 +1,9 @@
 'use client'
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 import { collection, getDocs } from 'firebase/firestore';
 import { firestore } from '../firebase/config';
 
-export default function admin() {
+export default function Pages() {
 
     const [movies, setMovies] = useState([]);
 
@@ -32,7 +32,7 @@ export default function admin() {
    
 
   return (
-    <div className='container mt-5 pt-5'>
+    <div className='container mt-5 pt-5 '>
     {movies.map(movie => (
         <div key={movie.id} className="card" style={{ width: '18rem' }}>
             <img src={movie.imageUrl} className="card-img-top" alt={movie.title} />

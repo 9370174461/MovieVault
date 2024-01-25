@@ -3,7 +3,7 @@ import  { useState, useEffect } from 'react';
 import { collection, getDocs } from 'firebase/firestore';
 import { firestore } from '../firebase/config';
 
-export default function admin() {
+export default function Admin() {
 
     const [movies, setMovies] = useState([]);
 
