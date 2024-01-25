@@ -1,37 +1,31 @@
 "use client"
-import { useState } from "react";
-import {  signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../firebase/config";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../firebase/config";
 
-export default function login() {
-
+export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const rauter =useRouter();
- 
- 
+  const router = useRouter(); // Corrected the variable name
+  console.log(auth?.currentUser?.email)
   const signIn = async (e) => {
-    e.preventDefault(); // Prevent the default form submission behavior
+    e.preventDefault();
 
     signInWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-      // Signed in 
-      const user = userCredential.user;
-      alert("sing in sucessfull ")
-      console.log(user);
-      rauter.push("/addmovie")
-      // ...
-    })
-    .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      alert(error.message)
-    });
-
+      .then(() => {
+        router.push("/addmovie");
+        alert("Sign in successful");
+       
+       
+      })
+      .catch((error) => {
+        const errorMessage = error.message;
+        alert(errorMessage);
+      });
   };
 
-
+  
   return (
     <>
       <div

@@ -1,6 +1,30 @@
-import React from 'react'
+'use client'
+import React, { useState, useEffect } from 'react';
+import { collection, getDocs } from 'firebase/firestore';
+import { firestore } from '../firebase/config';
 
-export default function addpage() {
+export default function admin() {
+
+    const [movies, setMovies] = useState([]);
+
+    const moviesCollectionRef = collection(firestore, "movies");
+
+    useEffect(() => {
+        const getMovieList = async () => {
+            try {
+                const querySnapshot = await getDocs(moviesCollectionRef);
+                const movieData = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+                setMovies(movieData);
+                console.log(movieData);
+            } catch (error) {
+                console.error(error);
+            }
+        }
+    
+        getMovieList();
+
+    }, []);
+{
   return (
     <div className="container my-3 justify-content-center align-items-center mt-5 pt-5 .bg-secondary" style={{color:'white' }}>
     <div className="row justify-content-center mt-5">
@@ -28,4 +52,4 @@ export default function addpage() {
     </div>
   </div>
   )
-}
+}}
