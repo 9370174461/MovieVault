@@ -52,6 +52,11 @@ export default function Navbar() {
                   Add Movies
                 </a>
               </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/admin">
+                  Random Movie
+                </a>
+              </li>
             </ul>
 
           
