@@ -7,7 +7,6 @@ import { useRouter } from "next/navigation";
 import { getDownloadURL, getStorage, ref, uploadBytes } from "firebase/storage";
 
 export default function Admin() {
-
   const [movies, setMovies] = useState([]);
   const [title, setTitle] = useState("");
   const [rating, setRating] = useState("");
@@ -40,15 +39,15 @@ export default function Admin() {
   const moviesubmit = async (e) => {
     e.preventDefault();
     try {
-      // Upload file to Firebase Storage
+      
       console.log("File to upload:", fileUpload);
       const storageRef = ref(storage, `movies/${fileUpload.name}`);
       await uploadBytes(storageRef, fileUpload);
 
-      // Get the download URL
+      
       const downloadURL = await getDownloadURL(storageRef);
 
-      // Add movie details to Firestore with the download URL
+      
       const docRef = await addDoc(moviesCollectionRef, {
         title: title,
         rating: rating,
@@ -58,6 +57,11 @@ export default function Admin() {
       });
 
       console.log("Document written with ID: ", docRef.id);
+      alert("Data Add successfully");
+      setTitle("");
+      setRating("");
+      setOverview("");
+      setFileUpload(null);
     } catch (err) {
       console.error(err);
       Router.push("/login");
@@ -69,7 +73,7 @@ export default function Admin() {
         console.log("sucessfully logout");
       })
       .catch((error) => {
-        // An error happened.
+        
       });
   };
 
@@ -132,11 +136,12 @@ export default function Admin() {
                 }}
               />
             </div>
-            <button type="submit" className="btn btn-primary">
+            <button type="submit" className="btn btn-primary btn-sm">
               Submit
             </button>
-            <button className="btn btn-primary" onClick={singout}>
-              logout
+            
+            <button className="btn btn-secondary btn-sm" onClick={singout}>
+              Logout
             </button>
           </form>
         </div>

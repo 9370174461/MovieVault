@@ -48,7 +48,7 @@ export default function Navbar() {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/addmovie">
+                <a className="nav-link" href="/login">
                   Add Movies
                 </a>
               </li>
