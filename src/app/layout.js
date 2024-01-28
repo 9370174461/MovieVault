@@ -3,7 +3,7 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 /* styles/globals.css */
 import "bootstrap/dist/css/bootstrap.min.css";
-import { app } from "./firebase/config";
+import { Choice } from "@s-r0/choice-js";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
